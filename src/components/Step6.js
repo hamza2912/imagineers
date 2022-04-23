@@ -8,7 +8,7 @@ const Step6 = ({enquiry, consigneeDetails, quotation, profileDetails, handleStag
   return (
       <>
       <section className='w-full h-screen bg-blue-50 section6 flex items-center justify-center'>
-          <div className='lg:w-3/5 w-10/12 h-fit py-8 rounded shadow-xl mx-auto bg-gradient-to-r from-blue-400 to-blue-200 lg:-mt-24 -mt-12 fade-in-slow'>
+          <div className='lg:w-3/5 w-10/12 h-fit py-8 rounded shadow-xl mx-auto bg-gradient-to-r from-blue-400 to-blue-200 lg:-mt-24 mt-0 fade-in-slow relative'>
             <div className='pl-5'>
               <div className='grid grid-cols-5'>
                 <div className='col-span-2'>
@@ -88,7 +88,7 @@ const Step6 = ({enquiry, consigneeDetails, quotation, profileDetails, handleStag
                           <p className='ml-2 xs1 text-gray-500'>I accept and agree with all <span className='xs1  text-blue-500'>terms</span> and <span className='xs1  text-blue-500'>condition.</span></p>
                         </div>
                         <div className='hidden lg:block'>
-                          <button className='text-white text-xs rounded-md mt-2 py-2 px-12 bg-gradient-to-r from-blue-700 to-blue-500'>Pay INR {quotation.estimated_budget} Now</button>
+                          <button className={terms ? 'text-white text-xs rounded-md mt-2 py-2 px-12 bg-gradient-to-r from-blue-700 to-blue-500': 'text-white text-xs rounded-md mt-2 py-2 px-12 bg-blue-200 cursor-default'}>Pay INR {quotation.estimated_budget} Now</button>
                         </div>
                   </div>
               </div>
@@ -97,11 +97,11 @@ const Step6 = ({enquiry, consigneeDetails, quotation, profileDetails, handleStag
                   <input checked={terms} onChange={()=>setterms(!terms)} type="checkbox" />
                   <p className='w-full ml-2 xs1 text-gray-500 w-40'>I accept and agree with all <span className='xs1  text-blue-500'>terms</span> and <span className='xs1  text-blue-500'>condition.</span></p>
                 </div>
-                <button className='text-white text-xs rounded-md mt-2 py-2 px-12 bg-gradient-to-r from-blue-700 to-blue-500'>Pay INR {quotation.estimated_budget} Now</button>
+                <button className={terms ? 'text-white text-xs rounded-md mt-2 py-2 px-12 bg-gradient-to-r from-blue-700 to-blue-500': 'text-white text-xs rounded-md mt-2 py-2 px-12 bg-blue-200'}>Pay INR {quotation.estimated_budget} Now</button>
               </div>
             </div>
+            <button onClick={()=>handleStage(5)} className='absolute lg:top-5 lg:right-5 top-2 right-2 text-xs font-semibold border-2 border-white mt-2 px-4 py-2 rounded-md text-white font-medium'>Back</button>
           </div>
-          <button onClick={()=>handleStage(5)} className='fade-in absolute lg:bottom-6 bottom-1 left-1/2 lg:-ml-10 -ml-6 lg:text-2xl text-base text-white'><i className='fas fa-angle-left mr-2 lg:text-lg text-sm'></i>Back</button>
       </section>
 
       </>

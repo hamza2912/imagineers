@@ -53,7 +53,7 @@ function Home() {
 
   return (
       
-      <>
+      <div className='relative'>
 
       <Header/>
 
@@ -72,7 +72,7 @@ function Home() {
         <Step6 handleStage={setstage} enquiry={enquiry} quotation={quotation} consigneeDetails={consigneeDetails} profileDetails={profileDetails} />
       }
   
-      </>
+    </div>  
 
   );
 

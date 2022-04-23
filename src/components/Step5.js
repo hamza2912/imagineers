@@ -65,14 +65,12 @@ const Step5 = ({handleStage, profileDetails, setprofileDetails}) => {
                         </div>
                         <div>
                             <button onClick={()=>{
-                              if(profileDetails.firstname != '' && profileDetails.lastname != '' && profileDetails.email != '' && profileDetails.contact != '' && profileDetails.password != '' && terms && profileDetails.password == confirmPassword){
+                              // if(profileDetails.firstname != '' && profileDetails.lastname != '' && profileDetails.email != '' && profileDetails.contact != '' && profileDetails.password != '' && terms && profileDetails.password == confirmPassword){
                                 handleStage(6)
-                              } else if(profileDetails.password != confirmPassword){
-                                alert("Password do not match!");
-                              } else{
-                                alert("Please fill all the details!");
-                              }
-                              }} className='text-xs border-2 border-blue mt-2 px-5 py-2 rounded-md text-white bg-blue-dark font-medium'>Next</button>
+                              // } else if(profileDetails.password != confirmPassword){
+                              //   alert("Password do not match!");
+                              // }
+                              }} className={profileDetails.firstname != '' && profileDetails.lastname != '' && profileDetails.email != '' && profileDetails.contact != '' && profileDetails.password != '' && terms ? 'text-xs border-2 border-blue mt-2 px-5 py-2 rounded-md text-white bg-blue-dark font-medium': 'text-xs border-2 border-blue-200 mt-2 px-5 py-2 rounded-md text-white bg-blue-200 font-medium cursor-default'}>Next</button>
                         </div>
                       </div>
                     </div>

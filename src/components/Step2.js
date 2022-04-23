@@ -12,7 +12,7 @@ function Step2({handleStage, enquiry, setenquiry, todayDate}) {
 
   return(
      <section className="w-full h-screen bg-blue-50 section2 flex items-center relative">
-         <div className="border-2 lg:w-3/5 w-4/5 h-fit mx-auto lg:px-32 px-4 py-8 bg-white rounded-md shadow-md -mt-20 fade-in-slow">
+         <div className="border-2 lg:w-3/5 w-4/5 h-fit mx-auto lg:px-32 px-4 py-8 bg-white rounded-md shadow-md lg:-mt-20 mt-5 fade-in-slow">
             <h1 className='text-blue text-2xl font-bold'>Product Details</h1>
             <p className='font-semibold lg:text-base text-sm mt-2'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam quos eius ducimus.</p>
             <div className='flex flex-row justify-between mt-4'>
@@ -87,16 +87,15 @@ function Step2({handleStage, enquiry, setenquiry, todayDate}) {
                 className={ enquiry.weightType == "ton" ? 'text-xs border-2 border-blue mt-2 px-5 py-2 rounded-md text-white bg-blue-dark font-medium' : 'text-xs border-2 border-blue mt-2 px-5 py-2 rounded-md text-blue font-medium'}>Ton</button>
                 </div>
             </div>
-            <div className='mt-4'>
+            <div className='mt-4 flex gap-4'>
                 <button onClick={()=>{
-                    if(enquiry.productName !== '' && enquiry.pickUpDate != '' && enquiry.weight != ''){handleStage(3)}}} className='text-white rounded-md bg-blue-main font-bold w-full px-5 py-2 mb-3'>Check Price</button>
+                    if(enquiry.productName !== '' && enquiry.pickUpDate != '' && enquiry.weight != ''){handleStage(3)}}} className={enquiry.productName !== '' && enquiry.pickUpDate != '' && enquiry.weight != '' ? 'bg-blue-main text-white rounded-md font-bold w-full px-5 py-2 mb-3' : 'bg-blue-200 text-white rounded-md font-bold w-full px-5 py-2 mb-3 cursor-default'}>Check Price</button>
+                <button onClick={()=>handleStage(1)} className='z-10 flex flex-row items-center justify-center fade-in w-24 h-fit text-sm font-semibold text-blue border-2 border-blue rounded-md py-2'>Back</button>
             </div>
          </div>
-         <div className='lg:w-3/12 w-4/12 absolute lg:bottom-56 bottom-40 right-0'>
+         <div className='lg:w-3/12 w-4/12 absolute lg:bottom-56 bottom-16 z-0 right-0'>
              <img src="./images/svg 2.png" alt="" />
          </div>
-        
-         <button onClick={()=>handleStage(1)} className='fade-in absolute lg:bottom-6 bottom-1 left-1/2 lg:-ml-10 -ml-6 lg:text-2xl text-base text-white'><i className='fas fa-angle-left mr-2 lg:text-lg text-sm'></i>Back</button>
      </section>
   ) ;
 }

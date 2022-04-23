@@ -1,5 +1,7 @@
 {
   "projects": {
-    "default": "pixact"
-  }
+    "default": "dptransport-portal",
+    "staging": "dptransport-portal"
+  },
+  "targets": {}
 }

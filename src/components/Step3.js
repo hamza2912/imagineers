@@ -3,6 +3,11 @@ import Header from "./Header";
 
 const Step3 = ({handleStage, enquiry, quotation, setquotation}) => {
 
+    const [showModal, setshowModal] = React.useState(false);
+    const [mobile, setmobile] = React.useState('');
+    const [showOTP, setshowOTP] = React.useState(false);
+    const [OTP, setOTP] = React.useState('');
+
     React.useEffect(() => {
     
         setquotation({
@@ -17,7 +22,7 @@ const Step3 = ({handleStage, enquiry, quotation, setquotation}) => {
   return (
   <>
     <section className='w-full h-screen bg-blue-50 section3 flex items-center justify-center'>
-        <div className='grid lg:grid-cols-2 grid-cols-1 lg:w-3/5 w-4/5 lg:-mt-24 -mt-12 fade-in-slow'>
+        <div className='grid lg:grid-cols-2 grid-cols-1 lg:w-3/5 w-4/5 lg:-mt-24 fade-in-slow'>
             {/* First Card */}
             <div className='lg:py-8 py-6 rounded shadow-xl bg-white'>
                 <div className='lg:px-12 px-6'>
@@ -51,7 +56,7 @@ const Step3 = ({handleStage, enquiry, quotation, setquotation}) => {
                             <button onClick={()=>handleStage(2)} className='text-xs font-semibold border-2 border-blue mt-2 px-4 py-2 rounded-md text-blue font-medium'>Back</button>
                         </div>
                         <div>
-                            <button className='text-xs border-2 border-blue mt-2 px-5 py-2 rounded-md text-white bg-blue-dark font-medium'>Call Now</button>
+                            <button onClick={()=>setshowModal(true)} className='text-xs border-2 border-blue mt-2 px-5 py-2 rounded-md text-white bg-blue-dark font-medium'>Call Now</button>
                         </div>
                     </div>
                 </div>
@@ -95,6 +100,42 @@ const Step3 = ({handleStage, enquiry, quotation, setquotation}) => {
             </div>
             
         </div>
+        {
+            showModal ?    
+                <div>
+                    <div className='dimmer'></div>
+                    <div className='messageBox lg:w-1/3 w-4/5 bg-white h-auto z-10 fade-in rounded-md'>
+                        <div className='w-full h-2 hero-text'></div>
+                        <div className='lg:w-3/4 w-4/5 flex flex-col items-center mx-auto pt-8 pb-10'>
+                            <p className='text-2xl font-semibold text-blue'>Lets get connected!</p>
+                            <p className='text-center lg:text-sm text-xs mt-2'>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                            { !showOTP ?
+                            <input value={mobile} onChange={(event) => setmobile(event.target.val)} className='lg:w-3/4 w-4/5 mt-4 bg-gray-200 px-4 py-2 rounded-md input-border focus:outline-none' placeholder='Enter Mobile Number' type="text" /> : null }
+                            { showOTP ?
+                            <> 
+                            <input value={OTP} onChange={(event) => setOTP(event.target.val)} className='lg:w-3/4 w-4/5 mt-4 bg-gray-200 px-4 py-2 rounded-md input-border focus:outline-none' placeholder='Enter OTP' type="text" />
+                            <p className='text-blue text-xs font-bold mt-2 cursor-pointer'>Resend?</p>
+                            </>
+                             : null
+                            }
+                        </div>
+                        <div className='flex flex-row gap-4 lg:mb-8 justify-center'>
+                            <div>
+                                <button onClick={()=>{setshowModal(false);setshowOTP(false);}} className='text-xs font-semibold border-2 border-blue mt-2 px-4 py-2 rounded-md text-blue font-medium'>Back</button>
+                            </div>
+                            { !showOTP ?
+                            <div>
+                                <button onClick={()=>setshowOTP(true)} className='text-xs border-2 border-blue mt-2 px-5 py-2 rounded-md text-white bg-blue-dark font-medium'>Send OTP</button>
+                            </div> :
+                            <div>
+                                <button onClick={()=>{setshowModal(false);setshowOTP(false);}} className='text-xs border-2 border-blue mt-2 px-5 py-2 rounded-md text-white bg-blue-dark font-medium'>Submit</button>
+                            </div>
+                            }
+                        </div>
+                    </div> 
+                </div>
+                : null
+          }
     </section>
   </>
   );

@@ -72,7 +72,13 @@ const Step4 = ({handleStage, enquiry, consigneeDetails, setconsigneeDetails}) =>
                             <button onClick={()=>handleStage(3)} className='text-xs font-semibold border-2 border-blue mt-2 px-4 py-2 rounded-md text-blue font-medium'>Back</button>
                         </div>
                         <div>
-                            <button onClick={()=>handleStage(5)} className='text-xs border-2 border-blue mt-2 px-5 py-2 rounded-md text-white bg-blue-dark font-medium'>Next</button>
+                        <button onClick={()=>{
+                              // if(profileDetails.firstname != '' && profileDetails.lastname != '' && profileDetails.email != '' && profileDetails.contact != '' && profileDetails.password != '' && terms && profileDetails.password == confirmPassword){
+                                handleStage(5)
+                              // } else if(profileDetails.password != confirmPassword){
+                              //   alert("Password do not match!");
+                              // }
+                              }} className={consigneeDetails.firstname != '' && consigneeDetails.lastname != '' && consigneeDetails.address != '' && consigneeDetails.contact != '' && consigneeDetails.email != '' ? 'text-xs border-2 border-blue mt-2 px-5 py-2 rounded-md text-white bg-blue-dark font-medium': 'text-xs border-2 border-blue-200 mt-2 px-5 py-2 rounded-md text-white bg-blue-200 font-medium cursor-default'}>Next</button>
                         </div>
                       </div>
                     </div>

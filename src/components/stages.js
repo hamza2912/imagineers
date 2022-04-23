@@ -15,7 +15,7 @@ function Stages( props ) {
                   <li className={props.step >= 6 ? 'border-4 rounded-full text-sm lg:text-base py-2 lg:px-4 px-3 bg-blue-main text-white' : 'border-4 rounded-full text-sm lg:text-base py-2 lg:px-4 px-3 bg-white text-gray-300'}>6</li>
               </ul>
           </div>
-          <div className="h-px w-full absolute top-1/2 bg-gray-400"></div>   
+          <div className="h-px w-full absolute top-1/2 bg-gray-300"></div>   
         </div>
 
     );
