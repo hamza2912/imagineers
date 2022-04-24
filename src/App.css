@@ -97,6 +97,7 @@ input::-webkit-input-placeholder{
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  padding-bottom: 20px;
 }
 .fade-in{
   animation: FadeIn 0.2s linear;
