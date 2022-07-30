@@ -6,9 +6,15 @@ function Header() {
 
     const [showNav, setshowNav] = React.useState(false);
 
+    React.useEffect(() => {
+
+        // console.log(consigneeDetails.firstname);
+      
+    }, []);
+
     return (
 
-        <section className="fixed nav w-full lg:px-12 px-8 py-5 text-center z-10"> 
+        <header className="fixed nav w-full lg:px-12 px-8 py-5 text-center z-10"> 
             <div className="flex justify-between items-center  text-center">
                 <div className="">
                     <img className="w-4/5 h-auto" src="./images/DP Transport New Logo 1.png" alt="" />
@@ -36,7 +42,7 @@ function Header() {
                 </div>
                 : null}
             </div>
-        </section>       
+        </header>       
 
     );
 }
