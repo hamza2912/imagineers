@@ -9,12 +9,8 @@ function Home() {
 
   return (
       
-    <div className='relative'>
+    <div className=''>
 
-      <Header/>
-      
-
-      <Footer />
   
     </div>  
 

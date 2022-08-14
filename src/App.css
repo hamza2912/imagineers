@@ -5,10 +5,8 @@
   font-family: 'Mulish', sans-serif;
 }
 .section1{
-  background-image: url('./background-images/wave\ 1.png'),url('./background-images/svg\ 1.png');
   background-repeat: no-repeat;
   background-position: 0% 110%, 90% 33.6%;
-  background-size: 100%, 33.5%;
 }
 
 .fade-in{
@@ -17,12 +15,25 @@
 .fade-in-slow{
   animation: FadeIn 0.5s linear;
 }
+.slide-down{
+  animation: SlideDown 0.2s linear;
+}
 @keyframes FadeIn {
   0% {
     opacity: 0;
   }
   100% {
     opacity: 1;
+  }
+}
+@keyframes SlideDown {
+  0% {
+    opacity: 0;
+    height: 0;
+  }
+  100% {
+    opacity: 1;
+    height: 100vh;
   }
 }
 @media only screen and (max-width:786px) {
