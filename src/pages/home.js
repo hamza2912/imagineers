@@ -79,7 +79,7 @@ function Home() {
                     <div className='flex flex-col gap-4'>
                         <div data-aos="fade-up"  data-aos-delay='100' data-aos-duration="800" class="flex flex-row p-6 text-gray-700">
                             <div class="w-2/3 h-auto ml-3">
-                                <h3 class="text-3xl font-bold">Ages 11-13</h3>
+                                <h3 class="text-3xl font-bold">Ages 11-18</h3>
                                 <p class="mt-2 text-xl text-pink-700 font-bold">Middle School Children</p>
                             </div>
                         </div>
@@ -90,7 +90,7 @@ function Home() {
                                 <p><i class="fa-solid fa-code text-yellow-200"></i></p>
                             </div>
                             <div class="w-2/3 h-auto ml-3">
-                                <h3 class="text-2xl font-semibold">Introduction to Programming with Python</h3>
+                                <h3 class="text-2xl font-semibold">Introduction to Programming with Python for Data Analysis</h3>
                                 <p class="mt-4">In the first course, students establish a solid programming foundation by immersing themselves in Python.</p>
                             </div>
                         </a>
@@ -101,8 +101,44 @@ function Home() {
                                 <p><i class="fa-solid fa-keyboard text-yellow-200"></i></p>
                             </div>
                             <div class="w-2/3 h-auto ml-3">
-                                <h3 class="text-2xl font-semibold">Beyond Basics with Python</h3>
-                                <p class="mt-4">Beyond Basics with Python, the second course in our middle school Wizard Level 1 curriculum, focuses on reinforcing Python programming skills.
+                                <h3 class="text-2xl font-semibold">Web Development Mastery</h3>
+                                <p class="mt-4">In the Web Development course, students establish a strong foundation by mastering HTML and CSS, and creating well-structured web pages with responsive layouts.
+                                </p>
+                            </div>
+                        </a>
+
+                        <a href='programs#course5'
+                            data-aos="zoom-in" data-aos-delay='300' data-aos-duration="800" class="flex flex-row border border-gray-300 p-6 text-white bg-yellow-600">
+                            <div class="w-25 h-auto text-4xl mr-3">
+                                <p><i class="fa-solid fa-keyboard text-yellow-200"></i></p>
+                            </div>
+                            <div class="w-2/3 h-auto ml-3">
+                                <h3 class="text-2xl font-semibold">Intro to Datascience</h3>
+                                <p class="mt-4">Embarking on an exciting journey to unravel the mysteries of data. Through interactive activities, hands-on projects, and creative experiments, we'll explore the fundamentals of Data Science and its real-world applications.
+                                </p>
+                            </div>
+                        </a>
+
+                        <a href='programs#course6'
+                            data-aos="zoom-in" data-aos-delay='300' data-aos-duration="800" class="flex flex-row border border-gray-300 p-6 text-white bg-yellow-600">
+                            <div class="w-25 h-auto text-4xl mr-3">
+                                <p><i class="fa-solid fa-keyboard text-yellow-200"></i></p>
+                            </div>
+                            <div class="w-2/3 h-auto ml-3">
+                                <h3 class="text-2xl font-semibold">Intro to Cloud Computing</h3>
+                                <p class="mt-4">Embarking on an exciting journey to understand the fundamentals of cloud computing and its impact on our digital lives through hands-on activities, interactive demos, and teamwork.
+                                </p>
+                            </div>
+                        </a>
+
+                        <a href='programs#course7'
+                            data-aos="zoom-in" data-aos-delay='300' data-aos-duration="800" class="flex flex-row border border-gray-300 p-6 text-white bg-yellow-600">
+                            <div class="w-25 h-auto text-4xl mr-3">
+                                <p><i class="fa-solid fa-keyboard text-yellow-200"></i></p>
+                            </div>
+                            <div class="w-2/3 h-auto ml-3">
+                                <h3 class="text-2xl font-semibold">Intro to AI</h3>
+                                <p class="mt-4">Embarking on an engaging journey to understand the foundations of AI, machine learning, and robotics through a blend of interactive lessons, hands-on activities, and creative projects.
                                 </p>
                             </div>
                         </a>
@@ -134,7 +170,7 @@ function Home() {
                         <td>3 Weeks</td>
                         <td>50 Minutes</td>
                         <td>4 Sessions / Week</td>
-                        <td>C$360 total</td>
+                        <td>C$170 total</td>
                         </tr> 
                     </tbody>
                 </table>
@@ -172,7 +208,7 @@ function Home() {
                         <td>1 Week</td>
                         <td>2 Hours</td>
                         <td>5 Sessions / Week</td>
-                        <td>C$325 total</td>
+                        <td>C$150 total</td>
                         </tr> 
                     </tbody>
                 </table>
