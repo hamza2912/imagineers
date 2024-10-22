@@ -101,7 +101,7 @@ function Program() {
                         <h2 data-aos="fade-right" data-aos-duration="800"  className='mt-6 font-bold text-2xl text-pink-700'>Middle School Children (Ages 11-17)</h2>
                         <p className='font-bold mt-4'>TIme: 55 Minutes</p>
                         <p className='font-bold'> Durtion: 6 Weeks, 2 Sessions/week</p>
-                        <p className='font-bold'> Pricing: C$255</p>
+                        <p className='font-bold'> Pricing: <span className='line-through'>C$370</span> C$270</p>
 
                     </div>
                     <div class="w-full h-auto mt-6">
@@ -184,7 +184,7 @@ function Program() {
                         <h2 data-aos="fade-right" data-aos-duration="800" className='mt-6 font-bold text-2xl text-pink-700'>Middle School Children (Ages 11-18)</h2>
                         <p className='font-bold mt-4'>TIme: 55 Minutes</p>
                         <p className='font-bold'> Durtion: 7 Weeks, 2 Sessions/week</p>
-                        <p className='font-bold'> Pricing: C$285</p>
+                        <p className='font-bold'> Pricing: <span className='line-through'>C$420</span> C$300</p>
                     </div>
                     <div class="w-full h-auto mt-6">
                         <p 

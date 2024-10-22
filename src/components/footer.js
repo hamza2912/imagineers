@@ -11,6 +11,7 @@ function Footer() {
     const [email, setemail] = React.useState("");
     const [phone, setphone] = React.useState("");
     const [location, setlocation] = React.useState("");
+    const [course, setcourse] = React.useState("");
     const [betaList, setbetaList] = React.useState([]);
 
     const db = getDatabase();
@@ -33,7 +34,8 @@ function Footer() {
                 name: name,
                 email: email,
                 phone: phone,
-                location: location
+                location: location,
+                course: course
             })
             set(ref(db, 'betaList'),betalist);
             alert("Thank you! You're on the list!");
@@ -41,6 +43,7 @@ function Footer() {
             setemail("");
             setphone("");
             setlocation("");
+            setcourse("");
         } else{
             alert('Please fill out the details.')
         }
@@ -62,6 +65,7 @@ function Footer() {
                             <input value={email} onChange={(event) => setemail(event.target.value)} className='lg:w-3/4 w-4/5 mt-2 bg-gray px-4 py-2 rounded-md input-border focus:outline-none' placeholder='Email' type="email" />
                             <input value={phone} onChange={(event) => setphone(event.target.value)} className='lg:w-3/4 w-4/5 mt-2 bg-gray px-4 py-2 rounded-md input-border focus:outline-none' placeholder='Phone' type="text" />
                             <input value={location} onChange={(event) => setlocation(event.target.value)} className='lg:w-3/4 w-4/5 mt-2 bg-gray px-4 py-2 rounded-md input-border focus:outline-none' placeholder='Location' type="text" />
+                            <input value={course} onChange={(event) => setcourse(event.target.value)} className='lg:w-3/4 w-4/5 mt-2 bg-gray px-4 py-2 rounded-md input-border focus:outline-none' placeholder='Course Name' type="text" />
                             <button onClick={submitBeta} className='w-3/4 mt-4 py-3 bg-yellow-600 text-white rounded-md text-sm font-semibold'>Subscribe</button>
                         </div>
                     </div> 
@@ -72,18 +76,19 @@ function Footer() {
                     <img className="w-1/2 lg:-ml-6 mx-auto" src="images/logo/Imagineers_Logo.png" alt="Logo" />
                     <p>Copyright © 2023 Imagineers | All Rights Reserved.</p>
                     <p class="mt-4 text-white"><i class="fa-solid fa-location-dot mr-2"></i>
-                        N Acton Road, London NW10 6PH</p>
+                    Unit #3210, 4250, 109 Ave NE, Calgary, Alberta, Canada. T3N 1Z3.</p>
                     <p class="mt-4 text-white"><i class="fa-solid fa-envelope mr-2"></i>
                         imagineerslabs@gmail.com</p>
                     <p class="mt-4 text-white"><i class="fa-solid fa-phone mr-2"></i>
                     +1 403 630 0125</p>     
                 </div>
-                <div class="lg:w-1/2 w-full h-auto text-white text-xl flex justify-center items-center mt-8 lg:mt-0">
-                    <div className="w-1/2 flex justify-between">
-                    <a class="hover:text-gray-600" href="" target="_blank"><i class="fa-brands fa-twitter"></i></a>
-                    <a class="hover:text-gray-600" href="" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a class="hover:text-gray-600" href="" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-                    <a class="hover:text-gray-600" href="" target="_blank"><i class="fa-brands fa-pinterest-p"></i></a>
+                <div class="lg:w-1/2 w-full h-auto text-white text-xl flex flex-col justify-center items-center mt-8 lg:mt-0">
+                    <img className="w-44 h-auto" src="images/QR.jpg" alt="" />
+                    <div className="w-1/2 flex justify-between mt-4">
+                    <a class="hover:text-gray-600" href="https://twitter.com/aliahmadabidi" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                    <a class="hover:text-gray-600" href="https://www.facebook.com/profile.php?id=100094921002246&mibextid=LQQJ4d" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a class="hover:text-gray-600" href="https://instagram.com/imagineerslabs?igshid=OGQ5ZDc2ODk2ZA%3D%3D&utm_source=qr" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <a class="hover:text-gray-600" href="https://www.linkedin.com/company/imagineers-creative-labs/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
                     </div>
                     
                 </div>

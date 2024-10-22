@@ -3,5 +3,6 @@
     "default": "imaginers-stg",
     "staging": "imaginers-stg"
   },
-  "targets": {}
+  "targets": {},
+  "etags": {}
 }

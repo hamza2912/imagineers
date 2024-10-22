@@ -60,15 +60,37 @@ function Header({page}) {
                             href='about'
                             >About</a>
                         </div>
+                        <div class="relative">
+                            {/* <a 
+                            href='#programs'>Programs</a> */}
+                            <a onClick={()=>setshowdropdown(!showdropdown)} className="h-green z-10">Programs</a>
+                                {showdropdown ? <div class='absolute w-64 flex flex-col  pl-2 pt-4 pb-4 top-5 left-0 shadow-lg text-sm slide-down-fast'>
+                                    <a className="h-green" target='_blank' href='icl-animations-and-games-with-scratch'>Animations & Games with Scratch</a>
+                                    <a className="h-green" target='_blank' href='icl-logic-with-scratch'>Logic with Scratch</a>
+                                    <a className="h-green" target='_blank' href='icl-introduction-to-python-programming-for-data-analysis'>Intro to Python Programming</a>
+                                    <a className="h-green" target='_blank' href='icl-web-development-mastery'>Web development Mastery</a>
+                                    <a className="h-green" target='_blank' href='icl-intro-to-datascience'>Intro to Datascience</a>
+                                    <a className="h-green" target='_blank' href='icl-intro-to-cloud-computing'>Intro to Cloud Computing</a>
+                                    <a className="h-green" target='_blank' href='icl-intro-to-ai'>Intro to AI</a>
+                                    <a className="h-green" target='_blank' href='icl-c-plus-development'>C++ Development</a>
+                                    <a className="h-green" target='_blank' href='icl-cybersecurity'>Cybersecurity</a>
+                                    <a className="h-green" target='_blank' href='icl-ai-with-machine-learning'>AI with Machine Learning</a>
+                                    <a className="h-green" target='_blank' href='icl-social-media-management'>Social Media Management</a>
+                                    <a className="h-green" target='_blank' href='icl-video-design-creation'>Video Design Creation</a>
+                                </div>: null}
+                        </div>
                         <div class="h-green">
                             <a 
-                            href='programs'>Programs</a>
+                            href='sessions'>Sessions</a>
                         </div>
                         <div class="h-green">
                             <a 
                             href='pricing'>Pricing</a>
                         </div>
-                        
+                        <div class="h-green">
+                            <a 
+                            href='blogs'>Blogs</a>
+                        </div>
                         <div class="h-green">
                             <a onClick={scrolltoJoin} >Enroll</a>
                         </div>
@@ -84,12 +106,35 @@ function Header({page}) {
                             <a href='about' onClick={()=>{setshowNav(!showNav)}}>About</a>
                         </div>
                         <div class="h-green text-black mt-10">
-                            <a href='programs' onClick={()=>{setshowNav(!showNav)}}>Programs</a>
+                            <a  onClick={()=>setshowdropdown(!showdropdown)}>Programs</a>
+                        </div>
+                        {showdropdown ? 
+                        <div class='h-green text-black mt-10 flex flex-col gap-2 items-center'>
+                            <a className="h-green" href='icl-animations-and-games-with-scratch'>Animations & Games with Scratch</a>
+                            <a className="h-green" href='icl-logic-with-scratch'>Logic with Scratch</a>
+                            <a className="h-green" href='icl-introduction-to-python-programming-for-data-analysis'>Intro to Python Programming</a>
+                            <a className="h-green" href='icl-web-development-mastery'>Web development Mastery</a>
+                            <a className="h-green" href='icl-intro-to-datascience'>Intro to Datascience</a>
+                            <a className="h-green" href='icl-intro-to-cloud-computing'>Intro to Cloud Computing</a>
+                            <a className="h-green" href='icl-intro-to-ai'>Intro to AI</a>
+
+                            <a className="h-green" href='icl-c-plus-development'>C++ Development</a>
+                            <a className="h-green" href='icl-cybersecurity'>Cybersecurity</a>
+                            <a className="h-green" href='icl-ai-with-machine-learning'>AI with Machine Learning</a>
+                            <a className="h-green" href='icl-social-media-management'>Social Media Management</a>
+                            <a className="h-green" href='icl-video-design-creation'>Video Design Creation</a>
+
+
+                        </div>: null}
+                        <div class="h-green text-black mt-10">
+                            <a href='sessions' onClick={()=>{setshowNav(!showNav)}}>Sessions</a>
                         </div>
                         <div class="h-green text-black mt-10">
                             <a href='pricing' onClick={()=>{setshowNav(!showNav)}}>Pricing</a>
                         </div>
-                        
+                        <div class="h-green text-black mt-10">
+                            <a href='blogs' onClick={()=>{setshowNav(!showNav)}}>Blogs</a>
+                        </div>
                         <div class="h-green text-black mt-10">
                             <a onClick={()=>{setshowNav(!showNav);scrolltoJoin()}}>Enroll</a>
                         </div>

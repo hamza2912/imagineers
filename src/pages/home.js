@@ -3,6 +3,11 @@ import Header from '../components/header';
 import Footer from '../components/footer';
 import Popup from '../components/popup';
 
+export const textTruncate = (text = '', length) => {
+    if (text?.length > length) return text.substring(0, length).concat(' . . . ');
+    return text;
+  };
+
 
 function Home() {
 
@@ -34,16 +39,16 @@ function Home() {
                         <h2>Transforming today's gamers into the engineers, animators, robotics experts, and game developers of tomorrow.</h2>
                     </div>
                     <div class="w-full h-auto text-lg text-white mt-8">
-                        <p class="mt-2 flex items-center"><i class="fa-solid fa-children text-yellow-400 mr-3 text-2xl"></i>Harness your child's passion for gaming into valuable STEM skills</p>
-                        <p class="mt-2 flex items-center"><i class="fa-solid fa-person-chalkboard text-yellow-500 mr-2 text-2xl"></i>Pave the way for their future success through our captivating online classes, cutting-edge curriculum, and expert instructors.</p>
+                        <h3 class="mt-2 flex items-center"><i class="fa-solid fa-children text-yellow-400 mr-3 text-2xl"></i>Harness your child's passion for gaming into valuable STEM skills</h3>
+                        <h3 class="mt-2 flex items-center"><i class="fa-s olid fa-person-chalkboard text-yellow-500 mr-2 text-2xl"></i>Pave the way for their future success through our captivating online classes, cutting-edge curriculum, and expert instructors.</h3>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="w-full h-auto lg:py-20 py-12 lg:px-20 px-6">
+        <section id="programs" class="w-full h-auto lg:py-20 py-12 lg:px-20 px-6">
             <div class="w-full h-auto text-center text-4xl font-bold ">
-                <h4 className='text-gray-800 font-algeria' data-aos="fade-up" data-aos-duration="800">Programs Offered</h4>
+                <h1 className='text-gray-800 font-algeria' data-aos="fade-up" data-aos-duration="800">Programs Offered</h1>
                 <div className='w-32 border-b-4 border-yellow-600 mx-auto mt-1' data-aos="fade-up" data-aos-duration="800"></div>
             </div>
             <div class="w-full h-auto mt-16">
@@ -51,97 +56,163 @@ function Home() {
                     <div className='flex flex-col gap-4'>
                         <div data-aos="fade-up"  data-aos-delay='50' data-aos-duration="800" class="flex flex-row p-6 text-gray-700">
                             <div class="w-2/3 h-auto ml-3">
-                                <h3 class="text-3xl font-bold">Ages: 7-10</h3>
-                                <p class="mt-2 text-xl text-pink-700 font-bold">Elementary School Children</p>
+                                <h2 class="text-3xl font-bold">Ages: 7-10</h2>
+                                <h3 class="mt-2 text-xl text-pink-700 font-bold">Elementary School Children</h3>
                             </div>
                         </div>
-                        <a href='programs#course1'
-                            data-aos="zoom-in" data-aos-delay='150' data-aos-duration="800" class="flex flex-row border border-gray-300 p-6 text-white bg-yellow-600">
-                            <div class="w-25 h-auto text-4xl mr-3">
-                                <p><i class="fa-gamepad fa-solid text-yellow-200"></i></p>
-                            </div>
-                            <div class="w-2/3 h-auto ml-3">
-                                <h3 class="text-2xl font-semibold">Animations and Games with Scratch</h3>
-                                <p class="mt-4">This program serves as an outstanding entry point to programming specifically tailored for younger students.</p>
-                            </div>
-                        </a>
-                        <a href='programs#course2'
-                        data-aos="zoom-in" data-aos-delay='250' data-aos-duration="800" class="flex flex-row border border-gray-300 p-6 text-white bg-yellow-600">
-                            <div class="w-25 h-auto text-4xl mr-3">
-                                <p><i class="fa-solid fa-brain text-yellow-200"></i></p>
-                            </div>
-                            <div class="w-2/3 h-auto ml-3">
-                                <h3 class="text-2xl font-semibold">Logic with Scratch</h3>
-                                <p class="mt-4">Logic with Scratch serves as the second course in our elementary school program, enabling students to further develop their skills.</p>
-                            </div>
-                        </a>
+                        <div className='grid grid-cols-2 gap-2'>
+                            <a target="_blank" href='icl-animations-and-games-with-scratch'
+                                data-aos="zoom-in" data-aos-delay='150' data-aos-duration="800" class="flex flex-col items-center border border-gray-300 lg:p-4 px-3 py-4 text-white bg-yellow-600">
+                                <div class="w-25 h-auto lg:text-4xl text-3xl">
+                                    <p><i class="fa-gamepad fa-solid text-yellow-200"></i></p>
+                                </div>
+                                <div class="w-full h-auto text-center">
+                                    <h3 class="lg:text-xl text-base font-semibold">Animations and Games with Scratch</h3>
+                                    <p class="mt-4 text-sm">An outstanding entry point to programming specifically tailored for younger students.</p>
+                                </div>
+                            </a>
+                            <a target="_blank" href='icl-logic-with-scratch'
+                            data-aos="zoom-in" data-aos-delay='250' data-aos-duration="800" class="flex flex-col items-center border border-gray-300 lg:p-4 px-3 py-4 text-white bg-yellow-600">
+                                <div class="w-25 h-auto lg:text-4xl text-3xl">
+                                    <p><i class="fa-solid fa-brain text-yellow-200"></i></p>
+                                </div>
+                                <div class="w-full h-auto text-center">
+                                    <h3 class="lg:text-xl text-base font-semibold">Logic with Scratch</h3>
+                                    <p class="mt-4 text-sm">Second course in our elementary school program, enabling students to further develop their skills.</p>
+                                </div>
+                            </a>
+                        </div>
                     </div>
                     <div className='flex flex-col gap-4'>
                         <div data-aos="fade-up"  data-aos-delay='100' data-aos-duration="800" class="flex flex-row p-6 text-gray-700">
                             <div class="w-2/3 h-auto ml-3">
-                                <h3 class="text-3xl font-bold">Ages 11-18</h3>
-                                <p class="mt-2 text-xl text-pink-700 font-bold">Middle School Children</p>
+                                <h2 class="text-3xl font-bold">Ages 11-18</h2>
+                                <h4 class="mt-2 text-xl text-pink-700 font-bold">Middle School Children</h4>
                             </div>
                         </div>
-                        
-                        <a href='programs#course3'
-                            data-aos="zoom-in" data-aos-delay='200' data-aos-duration="800" class="flex flex-row border border-gray-300 p-6 text-white bg-yellow-600">
-                            <div class="w-25 h-auto text-4xl mr-3">
-                                <p><i class="fa-solid fa-code text-yellow-200"></i></p>
-                            </div>
-                            <div class="w-2/3 h-auto ml-3">
-                                <h3 class="text-2xl font-semibold">Introduction to Programming with Python for Data Analysis</h3>
-                                <p class="mt-4">In the first course, students establish a solid programming foundation by immersing themselves in Python.</p>
-                            </div>
-                        </a>
-                        
-                        <a href='programs#course4'
-                            data-aos="zoom-in" data-aos-delay='300' data-aos-duration="800" class="flex flex-row border border-gray-300 p-6 text-white bg-yellow-600">
-                            <div class="w-25 h-auto text-4xl mr-3">
-                                <p><i class="fa-solid fa-keyboard text-yellow-200"></i></p>
-                            </div>
-                            <div class="w-2/3 h-auto ml-3">
-                                <h3 class="text-2xl font-semibold">Web Development Mastery</h3>
-                                <p class="mt-4">In the Web Development course, students establish a strong foundation by mastering HTML and CSS, and creating well-structured web pages with responsive layouts.
-                                </p>
-                            </div>
-                        </a>
+                        <div className='grid grid-cols-2 gap-2'>
+                            <a target="_blank" href='icl-introduction-to-python-programming-for-data-analysis'
+                                data-aos="zoom-in" data-aos-delay='200' data-aos-duration="800" class="flex flex-col items-center border border-gray-300 lg:p-4 px-3 py-4 text-white bg-yellow-600">
+                                <div class="w-25 h-auto lg:text-4xl text-3xl">
+                                    <p><i class="fa-solid fa-code text-yellow-200"></i></p>
+                                </div>
+                                <div class="w-full h-auto text-center">
+                                    <h3 class="lg:text-xl text-base font-semibold">Introduction to Programming with Python for Data Analysis</h3>
+                                    <p class="mt-4 text-sm">Students establish a solid programming foundation by immersing themselves in Python.</p>
+                                </div>
+                            </a>
+                            
+                            <a target="_blank" href='icl-web-development-mastery'
+                                data-aos="zoom-in" data-aos-delay='300' data-aos-duration="800" class="flex flex-col items-center border border-gray-300 lg:p-4 px-3 py-4 text-white bg-yellow-600">
+                                <div class="w-25 h-auto lg:text-4xl text-3xl">
+                                    <p><i class="fa-solid fa-keyboard text-yellow-200"></i></p>
+                                </div>
+                                <div class="w-full h-auto text-center">
+                                    <h3 class="lg:text-xl text-base font-semibold">Web Development Mastery</h3>
+                                    <p class="mt-4 text-sm">Students establish a strong foundation by mastering HTML and CSS, and creating well-structured web pages.
+                                    </p>
+                                </div>
+                            </a>
 
-                        <a href='programs#course5'
-                            data-aos="zoom-in" data-aos-delay='300' data-aos-duration="800" class="flex flex-row border border-gray-300 p-6 text-white bg-yellow-600">
-                            <div class="w-25 h-auto text-4xl mr-3">
-                                <p><i class="fa-solid fa-keyboard text-yellow-200"></i></p>
-                            </div>
-                            <div class="w-2/3 h-auto ml-3">
-                                <h3 class="text-2xl font-semibold">Intro to Datascience</h3>
-                                <p class="mt-4">Embarking on an exciting journey to unravel the mysteries of data. Through interactive activities, hands-on projects, and creative experiments, we'll explore the fundamentals of Data Science and its real-world applications.
-                                </p>
-                            </div>
-                        </a>
+                            <a target="_blank" href='icl-intro-to-datascience'
+                                data-aos="zoom-in" data-aos-delay='300' data-aos-duration="800" class="flex flex-col items-center border border-gray-300 lg:p-4 px-3 py-4 text-white bg-yellow-600">
+                                <div class="w-25 h-auto lg:text-4xl text-3xl">
+                                    <p><i class="fa-solid fa-database text-yellow-200"></i></p>
+                                </div>
+                                <div class="w-full h-auto text-center">
+                                    <h3 class="lg:text-xl text-base font-semibold">Intro to Datascience</h3>
+                                    <p class="mt-4 text-sm">Embarking on an exciting journey to unravel the mysteries of data through interactive activities, hands-on projects, and creative experiments..
+                                    </p>
+                                </div>
+                            </a>
 
-                        <a href='programs#course6'
-                            data-aos="zoom-in" data-aos-delay='300' data-aos-duration="800" class="flex flex-row border border-gray-300 p-6 text-white bg-yellow-600">
-                            <div class="w-25 h-auto text-4xl mr-3">
-                                <p><i class="fa-solid fa-keyboard text-yellow-200"></i></p>
-                            </div>
-                            <div class="w-2/3 h-auto ml-3">
-                                <h3 class="text-2xl font-semibold">Intro to Cloud Computing</h3>
-                                <p class="mt-4">Embarking on an exciting journey to understand the fundamentals of cloud computing and its impact on our digital lives through hands-on activities, interactive demos, and teamwork.
-                                </p>
-                            </div>
-                        </a>
+                            <a target="_blank" href='icl-intro-to-cloud-computing'
+                                data-aos="zoom-in" data-aos-delay='300' data-aos-duration="800" class="flex flex-col items-center border border-gray-300 lg:p-4 px-3 py-4 text-white bg-yellow-600">
+                                <div class="w-25 h-auto lg:text-4xl text-3xl">
+                                    <p><i class="fa-solid fa-cloud text-yellow-200"></i></p>
+                                </div>
+                                <div class="w-full h-auto text-center">
+                                    <h3 class="lg:text-xl text-base font-semibold">Intro to Cloud Computing</h3>
+                                    <p class="mt-4 text-sm">Embarking on an exciting journey to understand the fundamentals of cloud computing and its impact on our digital lives.
+                                    </p>
+                                </div>
+                            </a>
 
-                        <a href='programs#course7'
-                            data-aos="zoom-in" data-aos-delay='300' data-aos-duration="800" class="flex flex-row border border-gray-300 p-6 text-white bg-yellow-600">
-                            <div class="w-25 h-auto text-4xl mr-3">
-                                <p><i class="fa-solid fa-keyboard text-yellow-200"></i></p>
-                            </div>
-                            <div class="w-2/3 h-auto ml-3">
-                                <h3 class="text-2xl font-semibold">Intro to AI</h3>
-                                <p class="mt-4">Embarking on an engaging journey to understand the foundations of AI, machine learning, and robotics through a blend of interactive lessons, hands-on activities, and creative projects.
-                                </p>
-                            </div>
-                        </a>
+                            <a target="_blank" href='icl-intro-to-ai'
+                                data-aos="zoom-in" data-aos-delay='300' data-aos-duration="800" class="flex flex-col items-center border border-gray-300 lg:p-4 px-3 py-4 text-white bg-yellow-600">
+                                <div class="w-25 h-auto lg:text-4xl text-3xl">
+                                    <p><i class="fa-solid fa-brain text-yellow-200"></i></p>
+                                </div>
+                                <div class="w-full h-auto text-center">
+                                    <h3 class="lg:text-xl text-base font-semibold">Intro to AI</h3>
+                                    <p class="mt-4 text-sm">Embarking on an engaging journey to understand the foundations of AI, machine learning, and robotics.
+                                    </p>
+                                </div>
+                            </a>
+
+                            <a target="_blank" href='icl-c-plus-development'
+                                data-aos="zoom-in" data-aos-delay='300' data-aos-duration="800" class="flex flex-col items-center border border-gray-300 lg:p-4 px-3 py-4 text-white bg-yellow-600">
+                                <div class="w-25 h-auto lg:text-4xl text-3xl">
+                                    <p><i class="fa-solid fa-code text-yellow-200"></i></p>
+                                </div>
+                                <div class="w-full h-auto text-center">
+                                    <h3 class="lg:text-xl text-base font-semibold">C++ Development Course Description</h3>
+                                    <p class="mt-4 text-sm">Embark on a journey into the world of C++ programming with our comprehensive C++ Development Course.
+                                    </p>
+                                </div>
+                            </a>
+
+                            <a target="_blank" href='icl-cybersecurity'
+                                data-aos="zoom-in" data-aos-delay='300' data-aos-duration="800" class="flex flex-col items-center border border-gray-300 lg:p-4 px-3 py-4 text-white bg-yellow-600">
+                                <div class="w-25 h-auto lg:text-4xl text-3xl">
+                                    <p><i class="fa-solid fa-lock text-yellow-200"></i></p>
+                                </div>
+                                <div class="w-full h-auto text-center">
+                                    <h3 class="lg:text-xl text-base font-semibold">Cybersecurity</h3>
+                                    <p class="mt-4 text-sm">Join us on a journey into the world of cybersecurity with our comprehensive Cybersecurity Course.
+                                    </p>
+                                </div>
+                            </a>
+
+                            <a target="_blank" href='icl-ai-with-machine-learning'
+                                data-aos="zoom-in" data-aos-delay='300' data-aos-duration="800" class="flex flex-col items-center border border-gray-300 lg:p-4 px-3 py-4 text-white bg-yellow-600">
+                                <div class="w-25 h-auto lg:text-4xl text-3xl">
+                                    <p><i class="fa-solid fa-brain text-yellow-200"></i></p>
+                                </div>
+                                <div class="w-full h-auto text-center">
+                                    <h3 class="lg:text-xl text-base font-semibold">AI with Machine Learning</h3>
+                                    <p class="mt-4 text-sm">Delve into the fascinating world of Artificial Intelligence (AI) with our comprehensive AI with Machine Learning Course.
+                                    </p>
+                                </div>
+                            </a>
+
+                            <a target="_blank" href='icl-social-media-management'
+                                data-aos="zoom-in" data-aos-delay='300' data-aos-duration="800" class="flex flex-col items-center border border-gray-300 lg:p-4 px-3 py-4 text-white bg-yellow-600">
+                                <div class="w-25 h-auto lg:text-4xl text-3xl">
+                                    <p><i class="fa-solid fa-keyboard text-yellow-200"></i></p>
+                                </div>
+                                <div class="w-full h-auto text-center">
+                                    <h3 class="lg:text-xl text-base font-semibold">Social Media Management</h3>
+                                    <p class="mt-4 text-sm">Join our Social Media Management Course and unlock the keys to success in the dynamic world of social media marketing.
+                                    </p>
+                                </div>
+                            </a>
+
+                            <a target="_blank" href='icl-video-design-creation'
+                                data-aos="zoom-in" data-aos-delay='300' data-aos-duration="800" class="flex flex-col items-center border border-gray-300 lg:p-4 px-3 py-4 text-white bg-yellow-600">
+                                <div class="w-25 h-auto lg:text-4xl text-3xl">
+                                    <p><i class="fa-solid fa-keyboard text-yellow-200"></i></p>
+                                </div>
+                                <div class="w-full h-auto text-center">
+                                    <h3 class="lg:text-xl text-base font-semibold">Video Design and Creation</h3>
+                                    <p class="mt-4 text-sm">Step into the world of digital storytelling with our Video Design and Creation Course.
+                                    </p>
+                                </div>
+                            </a>
+                            
+
+
+                        </div>
                     </div>
                 </div>
             </div>
@@ -170,7 +241,7 @@ function Home() {
                         <td>3 Weeks</td>
                         <td>50 Minutes</td>
                         <td>4 Sessions / Week</td>
-                        <td>C$170 total</td>
+                        <td><span className='line-through'>C$280</span> C$200</td>
                         </tr> 
                     </tbody>
                 </table>
@@ -208,18 +279,35 @@ function Home() {
                         <td>1 Week</td>
                         <td>2 Hours</td>
                         <td>5 Sessions / Week</td>
-                        <td>C$150 total</td>
+                        <td><span className='line-through'>C$240</span> C$170</td>
                         </tr> 
                     </tbody>
                 </table>
                 <button onClick={scrolltoJoin} className='px-5 py-2 bg-yellow-600 mt-2 font-semibold text-sm hover:text-white'>Enroll Now</button>
             </div>
         </div>
+        
+        <div class="bg-gray-900 w-full h-auto flex lg:flex-row flex-col mt-8 text-white">
+            <div class="lg:w-1/2 w-full h-auto lg:p-16 lg:py-20 p-6">
+                    <div class="w-full h-auto text-4xl font-bold">
+                        <h1 data-aos="fade-right" data-aos-duration="800">ICL’s Mentorship Program</h1>
+                        <div data-aos="fade-right" data-aos-duration="800" className="w-32 border-b-4 border-white mt-4"></div>
+                    </div>
+                    <div class="w-full h-auto mt-6">
+                        <p data-aos="fade-right" data-aos-duration="800">Our STEM-Based Learning Center is committed to fostering a collaborative learning environment that goes beyond traditional classroom boundaries. In line with this vision, we have established a unique mentorship program aimed at both parents and students. Our aim is to empower families with a deeper understanding of STEM education, a clear learning trajectory for their children, and valuable industry insights. This program aligns with our goal of shaping the next generation of STEM leaders. 
+                        </p>
+                        <p className='my-4' data-aos="fade-right" data-aos-duration="800">
+                        We provide resources, workshops, and seminars to enhance their understanding of the STEM fields, curriculum, and career opportunities. This trajectory helps them build a solid foundation and progress to more complex challenges. This equips them with an understanding of the practical applications and potential career paths within STEM industries.
+                        </p>
+                    </div>
+                    <a href='https://forms.gle/rr5vfYxCYwQ6Tv5j8' target='_blank' className='px-5 py-2 bg-yellow-600 mt-2 font-semibold text-sm hover:text-white'>Register Now</a>
+            </div>
+        </div>
 
         <div class="w-full h-auto flex justify-center lg:py-16 py-10">
             <div class="lg:w-3/4 w-full h-auto lg:p-16 p-6">
                 <div class="w-full h-auto text-4xl font-bold text-center">
-                    <h4 className='text-gray-800 font-algeria' data-aos="fade-up" data-aos-duration="800">What’s Provided with our Summer Classes</h4>
+                    <h1 className='text-gray-800 font-algeria' data-aos="fade-up" data-aos-duration="800">What’s Provided with our Summer Classes</h1>
                     <div className='w-32 border-b-4 border-yellow-600 mx-auto mt-1' data-aos="fade-up" data-aos-duration="800"></div>
                 </div>
                 <div class="w-full h-auto mt-6">
@@ -237,7 +325,7 @@ function Home() {
                       <li className='flex flex-row gap-2 items-center lg:text-lg'><i class="fa-solid fa-circle-check text-green-600"></i> Custom-Built Coding Platform</li>
                       <li className='flex flex-row gap-2 items-center lg:text-lg'><i class="fa-solid fa-circle-check text-green-600"></i> Regular Parent Updates on Student Progress</li>
                       <li className='flex flex-row gap-2 items-center lg:text-lg'><i class="fa-solid fa-circle-check text-green-600"></i> Certification for Successful Class Completion</li>
-                      <li className='flex flex-row gap-2 items-center lg:text-lg'><i class="fa-solid fa-circle-check text-green-600"></i> $384 Per Course ($128 Weekly installment plan available)</li>
+                      <li className='flex flex-row gap-2 items-center lg:text-lg'><i class="fa-solid fa-circle-check text-green-600"></i><span className='line-through'>C$560</span> $400 Per Course ($133 Weekly installment plan available)</li>
                     </ul>
                 </div>
             </div>

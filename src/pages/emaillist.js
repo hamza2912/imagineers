@@ -29,6 +29,7 @@ function Emaillist() {
                 <th>Email</th>
                 <th>Phone</th>
                 <th>Location</th>
+                <th>Course</th>
                 </tr>
             </thead>
             <tbody>
@@ -43,6 +44,7 @@ function Emaillist() {
                                 <td>{user.email}</td>
                                 <td>{user.phone}</td>
                                 <td>{user.location}</td>
+                                <td>{user.course? user.course:null}</td>
                             </tr> 
                         )
                     }) :

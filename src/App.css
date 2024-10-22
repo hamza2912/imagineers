@@ -27,6 +27,10 @@ html, body{
   background-color: rgb(211, 211, 212);
 }
 
+.line-through {
+  text-decoration: line-through;
+}
+
 .dimmer
 {
     background:#000;
